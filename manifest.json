@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Placehold Me",
+  "version": "1.0",
+  "description": "This plugin removes visual styles and content structure from a webpage, replacing it with placeholder text and images for experimental or accessibility review purposes. Developed by Li Huang as part of his 2025 Degree Project at the RISD Graphic Design Department.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_icon": "icon.webp",
+    "default_title": "Image + Style + Text"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["cover.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+  "16": "icon.png",
+  "48": "icon.png",
+  "128": "icon.png"
+}
+}
